@@ -5,6 +5,7 @@ import 'package:storezy/app_theme.dart';
 import 'package:storezy/services/storage_service.dart';
 import 'package:storezy/widgets/home_two.dart';
 
+import 'bindings/store_binding.dart';
 import 'controllers/theme_controller.dart';
 import 'home.dart';
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Storezy',
       theme: Themes.lightTheme,
+      initialBinding: StoreBinding(),
       darkTheme: Themes.darkTheme,
       debugShowCheckedModeBanner: false,
       themeMode: themeController.theme,
